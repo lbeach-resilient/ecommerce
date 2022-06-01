@@ -2,11 +2,12 @@ import React from "react"
 import logo from "src/logo.svg"
 import "src/App.css"
 import { Counter } from "src/features/counter/Counter"
+import Layout from "src/features/layout"
 
 export default function Demo() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
@@ -50,7 +51,7 @@ export default function Demo() {
             React Redux
           </a>
         </span>
-      </header>
+      </div>
     </div>
   )
 }

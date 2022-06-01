@@ -1,29 +1,18 @@
 import React from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Layout from "./features/layout"
 import Demo from "./pages/demo"
+import Shop from "./pages/shop"
 
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <Layout>
         <Routes>
           <Route path="/" element={<Demo />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
         </Routes>
-      </div>
+      </Layout>
     </Router>
   )
 }
