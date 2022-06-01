@@ -1,5 +1,10 @@
-import Layout from "src/features/layout"
+import ExchangeRates from "src/features/demos"
 
 export default function shop() {
-  return <h2>Shop</h2>
+  return (
+    <div>
+      <h2>Shop</h2>
+      <ExchangeRates />
+    </div>
+  )
 }
