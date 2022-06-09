@@ -2,7 +2,6 @@ import React from "react"
 import logo from "src/logo.svg"
 import "src/App.css"
 import { Counter } from "src/features/counter/Counter"
-import Layout from "src/features/layout"
 
 export default function Demo() {
   return (
