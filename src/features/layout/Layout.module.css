@@ -1,13 +1,13 @@
 .layoutContainer {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 .navigation {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .link > a {
-  color: inherit;
+    color: inherit;
 }

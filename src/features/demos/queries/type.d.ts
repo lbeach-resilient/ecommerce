@@ -1,22 +1,22 @@
 type Session = {
-  id: number
-  title: string
-  description: string
-  startsAt: string
-  room: string
-  day: string
-  endsAt: string
-  format: string
-  level: string
-  track: string
+    id: number
+    title: string
+    description: string
+    startsAt: string
+    room: string
+    day: string
+    endsAt: string
+    format: string
+    level: string
+    track: string
 }
 type SessionsData = {
-  sessions: Session[]
+    sessions: Session[]
 }
 type SessionsByData = {
-  sessionsBy: Session
+    sessionsBy: Session
 }
 
 type SessionsByVars = {
-  sessionsById: string
+    sessionsById: string
 }
