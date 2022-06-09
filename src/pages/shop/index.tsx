@@ -1,4 +1,5 @@
 import ExchangeRates from "src/features/demos"
+import React from "react"
 
 export default function shop() {
   return (
