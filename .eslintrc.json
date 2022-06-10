@@ -18,7 +18,9 @@
         "sourceType": "module"
     },
     "plugins": ["react", "@typescript-eslint"],
-    "rules": {},
+    "rules": {
+        "no-empty-pattern": "off"
+    },
     "settings": {
         "react": {
             "createClass": "createReactClass", // Regex for Component Factory to use,

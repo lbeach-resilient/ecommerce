@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './features/layout'
 import Demo from './pages/demo'
 import Home from './pages/home'
-import Shop from './pages/shop'
+import AllProducts from './pages/allProducts'
 
 export default function App() {
     return (
@@ -11,7 +11,7 @@ export default function App() {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="/shop" element={<Shop />}></Route>
+                    <Route path="/all-products" element={<AllProducts />}></Route>
                     <Route path="/demo" element={<Demo />}></Route>
                 </Routes>
             </Layout>
