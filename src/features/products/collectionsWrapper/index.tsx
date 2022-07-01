@@ -21,7 +21,6 @@ export default function ProductCollectionWrapper({ title, children }: Props) {
                     </Toolbar>
                 </AppBar>
             </Box>
-
             {children}
         </Box>
     )
