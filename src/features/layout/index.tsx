@@ -1,6 +1,6 @@
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { ReactNode, useContext, useEffect, useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home'
 import ShopIcon from '@mui/icons-material/Shop'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
@@ -8,6 +8,8 @@ import Paper from '@mui/material/Paper'
 import styles from './Layout.module.css'
 import { Link, useLocation } from 'react-router-dom'
 import Badge from '@mui/material/Badge'
+import { BasketContext } from '../state/basket/context'
+import BasketDialog from '../basketDialog'
 
 type Props = {
     children: ReactNode
@@ -19,7 +21,11 @@ export default function Layout({ children }: Props) {
 
     // Local State
     const [currentSelection, setCurrentSelection] = useState<string>()
-    const [basketOpen, setBasketOpen] = useState<boolean>()
+    const [basketOpen, setBasketOpen] = useState<boolean>(false)
+
+    // Context
+
+    const basket = useContext(BasketContext)
 
     // Event
     const handleBasket = () => {
@@ -36,6 +42,11 @@ export default function Layout({ children }: Props) {
 
     return (
         <div className={styles.layoutContainer}>
+            <BasketDialog
+                open={basketOpen}
+                onClose={() => setBasketOpen(false)}
+                rows={basket.basketItems}
+            />
             {children}
             <Paper className={styles.navigation} elevation={3}>
                 <BottomNavigation value={currentSelection}>
@@ -66,7 +77,7 @@ export default function Layout({ children }: Props) {
                         value="basket"
                         onClick={handleBasket}
                         icon={
-                            <Badge badgeContent={4} color="primary">
+                            <Badge badgeContent={basket.basketItems.length} color="primary">
                                 <ShoppingBasketIcon />
                             </Badge>
                         }
