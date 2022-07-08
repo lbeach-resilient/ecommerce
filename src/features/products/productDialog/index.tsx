@@ -35,10 +35,10 @@ export default function ProductDialog({
                 <Box className={styles.containerRight}>
                     <img src={image} className={styles.image} />
                     <Box className={styles.containerButtons}>
-                        <Button fullWidth={false} variant="contained" onClick={handleAddToCart}>
+                        <Button variant="contained" onClick={handleAddToCart}>
                             Add to Basket
                         </Button>
-                        <Button fullWidth={false} variant="contained" onClick={onClose}>
+                        <Button variant="contained" onClick={onClose}>
                             Close
                         </Button>
                     </Box>
