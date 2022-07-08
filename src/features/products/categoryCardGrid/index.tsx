@@ -25,7 +25,7 @@ export default function CategoryCardGrid({ products, category, onClickProductCar
             }}
         >
             <ImageListItem key="Subheader" cols={2}>
-                <ListSubheader component="div" sx={{ textTransform: 'capitalize' }}>
+                <ListSubheader component="div" sx={{ textTransform: 'capitalize', zIndex: 0 }}>
                     {category}
                 </ListSubheader>
             </ImageListItem>
