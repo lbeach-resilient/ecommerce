@@ -1,0 +1,41 @@
+.rootContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.containerLeft {
+    padding: 8px;
+    grid-column: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.titleAndDescription {
+    padding: 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+}
+
+.containerRight {
+    padding: 8px;
+    grid-column: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+}
+.image {
+    border-radius: 4px;
+    max-width: 100%;
+}
+.containerButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

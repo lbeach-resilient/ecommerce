@@ -9,10 +9,11 @@ import { useTheme } from '@mui/material/styles'
 type Props = {
     products: Product[]
     category: string
+    onClickProductCard: OnClickProductCard
 }
 
-export default function CategoryCardGrid({ products, category }: Props) {
-    console.log(category, { products })
+export default function CategoryCardGrid({ products, category, onClickProductCard }: Props) {
+    // Styles
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.up('sm'))
 
@@ -29,7 +30,15 @@ export default function CategoryCardGrid({ products, category }: Props) {
                 </ListSubheader>
             </ImageListItem>
             {products.map((product) => (
-                <ImageCard {...product} key={product.id} />
+                <ImageCard
+                    key={product.id}
+                    onClick={onClickProductCard}
+                    id={product.id}
+                    title={product.title}
+                    price={product.price}
+                    stock={product.stock}
+                    image={product.image}
+                />
             ))}
         </ImageList>
     )

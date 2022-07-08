@@ -7,6 +7,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
 import Paper from '@mui/material/Paper'
 import styles from './Layout.module.css'
 import { Link, useLocation } from 'react-router-dom'
+import Badge from '@mui/material/Badge'
 
 type Props = {
     children: ReactNode
@@ -64,7 +65,11 @@ export default function Layout({ children }: Props) {
                         label="Basket"
                         value="basket"
                         onClick={handleBasket}
-                        icon={<ShoppingBasketIcon />}
+                        icon={
+                            <Badge badgeContent={4} color="primary">
+                                <ShoppingBasketIcon />
+                            </Badge>
+                        }
                     />
                 </BottomNavigation>
             </Paper>

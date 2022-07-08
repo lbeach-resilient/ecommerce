@@ -1,5 +1,12 @@
+type ProductId = string
+
+type Specifications = {
+    adjective: string[]
+    color: string[]
+}
+
 type Product = {
-    id: string
+    id: ProductId
     title: string
     description: string
     category: string
