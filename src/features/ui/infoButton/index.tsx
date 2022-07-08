@@ -1,14 +1,14 @@
-import IconButton from '@mui/material/IconButton'
 import React from 'react'
-import InfoIcon from '@mui/icons-material/Info'
+import { default as MuiInfoIcon } from '@mui/icons-material/Info'
 import Tooltip from '@mui/material/Tooltip'
+import Box from '@mui/material/Box'
 
-export default function InfoButton({ title, onClick, tooltip }: InfoButtonProps) {
+export default function InfoIcon({ tooltip }: InfoIconProps) {
     return (
-        <Tooltip title={tooltip}>
-            <IconButton aria-label={`info about ${title}`} onClick={onClick}>
-                <InfoIcon color="primary" />
-            </IconButton>
-        </Tooltip>
+        <Box p={2}>
+            <Tooltip title={tooltip}>
+                <MuiInfoIcon color="primary" />
+            </Tooltip>
+        </Box>
     )
 }

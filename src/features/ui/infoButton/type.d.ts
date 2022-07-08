@@ -1,5 +1,3 @@
-type InfoButtonProps = {
-    title: string
-    onClick: () => void
+type InfoIconProps = {
     tooltip: string
 }
