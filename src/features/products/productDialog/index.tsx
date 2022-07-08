@@ -1,7 +1,8 @@
 import { Button, Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import Dialog from '@mui/material/Dialog'
-import React from 'react'
+import React, { useContext } from 'react'
+import { BasketContext } from 'src/features/state/basket/context'
 import styles from './productDialog.module.css'
 
 export default function ProductDialog({
@@ -14,8 +15,13 @@ export default function ProductDialog({
     open,
     onClose
 }: ProductDialogProps) {
+    // Context
+    const basket = useContext(BasketContext)
+
+    console.log(basket)
+
     const handleAddToCart = () => {
-        return null
+        basket.dispatch({ type: 'add', payload: { id, title, price, quantity: 1 } })
     }
     return (
         <Dialog open={open} onClose={onClose} fullWidth maxWidth={'lg'}>
